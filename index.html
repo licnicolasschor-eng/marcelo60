@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marcelo 60 · Confirmá tu asistencia</title>
+<meta name="description" content="Martes 29 de diciembre, de 20 a 02 h. Confirmá antes del 28 de noviembre.">
+<meta property="og:title" content="Marcelo cumple 60 🔴⚫">
+<meta property="og:description" content="Martes 29/12 · 20 a 02 h · Punta Barranca. Confirmá tu asistencia antes del 28/11.">
+<meta property="og:image" content="og.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Ccircle cx='32' cy='32' r='30'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect width='32' height='64' fill='%23e30613'/%3E%3Crect x='32' width='32' height='64' fill='%23111'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='30' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Ctext x='32' y='42' font-family='Arial Black,Arial' font-weight='900' font-size='28' fill='%23fff' text-anchor='middle'%3E60%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0a; --bg2:#141414; --card:#161616; --line:#2a2a2a;
+    --red:#e30613; --red2:#ff2a3d; --redDim:#5a0a10;
+    --txt:#f5f5f5; --mut:#a3a3a3;
+    --glow:0 0 18px rgba(227,6,19,.55),0 0 42px rgba(227,6,19,.25);
+    --r:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;line-height:1.5;min-height:100vh;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;
+    background:
+      radial-gradient(60% 40% at 50% 0%,rgba(227,6,19,.28),transparent 70%),
+      repeating-linear-gradient(90deg,rgba(227,6,19,.05) 0 40px,transparent 40px 80px);
+  }
+  .wrap{max-width:540px;margin:0 auto;padding:0 16px 48px}
+
+  /* HERO */
+  .hero{text-align:center;padding:44px 0 24px}
+  .badge{display:block;width:96px;height:96px;margin:0 auto 18px;filter:drop-shadow(0 0 22px rgba(227,6,19,.6));animation:float 4s ease-in-out infinite}
+  @keyframes float{50%{transform:translateY(-6px)}}
+  .kicker{display:inline-block;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:6px 14px;border-radius:99px;margin-bottom:12px}
+  .name{font-family:"Bebas Neue",Impact,sans-serif;font-size:clamp(56px,17vw,92px);line-height:.9;letter-spacing:.04em}
+  .sixty{font-family:"Bebas Neue",Impact,sans-serif;font-size:clamp(130px,44vw,220px);line-height:.82;
+    background:linear-gradient(90deg,var(--red) 0 50%,#fff 50% 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 0 24px rgba(227,6,19,.55));margin:4px 0 6px}
+  .tagline{color:var(--mut);font-size:16px;max-width:360px;margin:0 auto}
+  .tagline b{color:var(--txt)}
+
+  /* COUNTDOWN */
+  .count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:26px 0 0}
+  .cbox{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 4px;text-align:center}
+  .cbox span{display:block;font-family:"Bebas Neue",sans-serif;font-size:36px;line-height:1;color:var(--red2);text-shadow:0 0 12px rgba(227,6,19,.5)}
+  .cbox small{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.12em}
+
+  /* INFO */
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+  .info .it{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+  .info .it.full{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px;border-color:var(--redDim);background:linear-gradient(135deg,rgba(227,6,19,.14),var(--card))}
+  .it small{display:block;font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em}
+  .it strong{font-size:17px}
+  .place{display:block!important;padding:0!important;overflow:hidden;text-decoration:none;color:inherit;border-color:var(--line)!important;background:var(--card)!important}
+  .place .map{height:170px;position:relative;pointer-events:none;border-bottom:1px solid var(--line)}
+  .place iframe{width:100%;height:100%;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.6) brightness(.95)}
+  .pinfo{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px}
+  .pinfo span{display:block;color:var(--mut);font-size:14px}
+  .pinfo .go{color:#fff;font-weight:700;font-size:14px;background:linear-gradient(135deg,var(--red),#9b0510);padding:10px 14px;border-radius:99px;box-shadow:var(--glow);white-space:nowrap}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;justify-content:center;width:100%;margin-top:4px;padding:12px;border-radius:12px;border:1px solid var(--line);color:var(--txt);text-decoration:none;font-weight:600;font-size:14px;background:transparent}
+  .btn-ghost:hover{border-color:var(--red)}
+
+  /* FORM */
+  h2{font-family:"Bebas Neue",sans-serif;font-size:34px;letter-spacing:.04em;margin:34px 0 4px}
+  h2 em{font-style:normal;color:var(--red2)}
+  .sub{color:var(--mut);font-size:14px;margin-bottom:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:14px;animation:in .35s ease}
+  @keyframes in{from{opacity:0;transform:translateY(8px)}}
+  .card h3{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--red2);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .card h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:var(--glow)}
+  label.lb{display:block;font-size:14px;font-weight:600;margin:14px 0 8px}
+  h3+label.lb{margin-top:0}
+  .opt{font-weight:400;color:var(--mut)}
+  input[type=text],select,textarea{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--txt);border-radius:12px;padding:13px 14px;font:inherit;font-size:16px;outline:none;transition:border .2s,box-shadow .2s}
+  input[type=text]:focus,select:focus,textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(227,6,19,.2)}
+  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23e30613' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+  textarea{min-height:110px;resize:vertical}
+  .err{border-color:var(--red2)!important;animation:shake .3s}
+  @keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+
+  .seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .seg button,.pill{font:inherit;cursor:pointer;color:var(--txt);background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:13px 10px;font-weight:600;font-size:15px;transition:all .18s}
+  .seg button[aria-pressed=true]{background:linear-gradient(135deg,var(--red),#9b0510);border-color:var(--red2);box-shadow:var(--glow)}
+  .seg.big button{padding:16px 10px;font-size:16px}
+  .seg.big button span{display:block;font-size:22px;margin-bottom:2px}
+  .pills{display:flex;flex-wrap:wrap;gap:8px}
+  .pill{padding:9px 14px;border-radius:99px;font-size:14px;font-weight:500}
+  .pill[aria-pressed=true]{background:rgba(227,6,19,.18);border-color:var(--red);color:#fff;box-shadow:0 0 12px rgba(227,6,19,.35)}
+  .hide{display:none!important}
+  .hp{position:absolute;left:-9999px}
+
+  .cta{width:100%;margin-top:8px;padding:18px;border:0;border-radius:16px;cursor:pointer;font-family:"Bebas Neue",sans-serif;font-size:28px;letter-spacing:.12em;color:#fff;
+    background:linear-gradient(90deg,var(--red),#ff3b4e,var(--red));background-size:200% 100%;box-shadow:var(--glow);animation:shine 3s linear infinite;display:flex;align-items:center;justify-content:center;gap:12px}
+  @keyframes shine{to{background-position:200% 0}}
+  .cta:disabled{opacity:.7;cursor:wait}
+  .spin{width:22px;height:22px;border:3px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:rot .8s linear infinite}
+  @keyframes rot{to{transform:rotate(360deg)}}
+  .formerr{color:var(--red2);font-size:14px;text-align:center;margin-top:10px;min-height:20px}
+  .note{background:var(--bg2);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--mut);margin-bottom:14px}
+
+  .closed{text-align:center;padding:28px 18px}
+  .closed strong{display:block;font-size:20px;margin-bottom:6px}
+
+  footer{text-align:center;color:var(--mut);font-size:13px;margin-top:40px}
+  .stripes{height:6px;border-radius:99px;margin:0 auto 14px;max-width:160px;background:repeating-linear-gradient(90deg,var(--red) 0 20px,#000 20px 40px);border:1px solid #333}
+
+  /* MODAL */
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:16px;z-index:50}
+  .modal .box{background:var(--card);border:1px solid var(--redDim);border-radius:24px;max-width:420px;width:100%;padding:30px 22px;text-align:center;box-shadow:0 0 60px rgba(227,6,19,.3);animation:pop .4s cubic-bezier(.2,1.4,.4,1)}
+  @keyframes pop{from{transform:scale(.85);opacity:0}}
+  .modal .big{font-family:"Bebas Neue",sans-serif;font-size:46px;line-height:1;margin:10px 0}
+  .modal p{color:var(--mut);margin-bottom:18px}
+  .modal .cta{font-size:22px;padding:14px}
+  canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:60}
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+<div class="wrap">
+
+  <header class="hero">
+    <svg class="badge" viewBox="0 0 100 100" aria-hidden="true">
+      <defs><clipPath id="cc"><circle cx="50" cy="50" r="46"/></clipPath></defs>
+      <g clip-path="url(#cc)"><rect width="50" height="100" fill="#e30613"/><rect x="50" width="50" height="100" fill="#111"/></g>
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#fff" stroke-width="3"/>
+      <circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1"/>
+      <text x="50" y="64" text-anchor="middle" font-family="Bebas Neue,Impact,sans-serif" font-size="44" fill="#fff">60</text>
+    </svg>
+    <div class="kicker">Martes 29 · 12 · 2026</div>
+    <h1 class="name">Marcelo</h1>
+    <div class="sixty">60</div>
+    <p class="tagline"><b>Sesenta años rojinegros.</b> Una noche para festejarlos con la gente que quiero.</p>
+
+    <div class="count" id="count" aria-label="Cuenta regresiva">
+      <div class="cbox"><span id="cd">--</span><small>días</small></div>
+      <div class="cbox"><span id="ch">--</span><small>horas</small></div>
+      <div class="cbox"><span id="cm">--</span><small>min</small></div>
+      <div class="cbox"><span id="cs">--</span><small>seg</small></div>
+    </div>
+  </header>
+
+  <section class="info">
+    <div class="it"><small>Cuándo</small><strong>Mar 29/12</strong></div>
+    <div class="it"><small>Horario</small><strong>20:00 a 02:00</strong></div>
+    <div class="it full">
+      <div><small>Confirmá antes del</small><strong>Sábado 28 de noviembre</strong></div>
+      <div style="font-size:28px">⏳</div>
+    </div>
+    <a class="it full place" id="mapLink" target="_blank" rel="noopener" aria-label="Abrir Punta Barranca en Google Maps">
+      <div class="map"><iframe title="Mapa de Punta Barranca" loading="lazy" tabindex="-1" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Punta+Barranca,+David+Pe%C3%B1a+96,+Rosario,+Santa+Fe&z=15&output=embed"></iframe></div>
+      <div class="pinfo">
+        <div><small>Dónde</small><strong>Punta Barranca</strong><span>David Peña 96, Rosario</span></div>
+        <span class="go">Cómo llegar ↗</span>
+      </div>
+    </a>
+    <a class="btn-ghost" id="calLink" target="_blank" rel="noopener" style="grid-column:1/-1">📅 Agendar en mi calendario</a>
+  </section>
+
+  <main id="rsvp">
+    <h2>¿Venís? <em>Confirmá acá</em></h2>
+    <p class="sub">Te lleva un minuto. Si venís con alguien, cargalo también.</p>
+
+    <div class="note hide" id="already">Ya mandaste una confirmación desde este celular. Si querés cargar a otra persona o corregir algo, podés enviar de nuevo.</div>
+
+    <form id="form" novalidate>
+      <input class="hp" type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+
+      <div class="card">
+        <h3>¿Cómo venís?</h3>
+        <div class="seg big" id="modo">
+          <button type="button" data-v="1" aria-pressed="true"><span>🙋</span>Voy solo/a</button>
+          <button type="button" data-v="2" aria-pressed="false"><span>👫</span>Vamos en pareja</button>
+        </div>
+      </div>
+
+      <div id="people"></div>
+
+      <div class="card">
+        <h3>Para la fiesta</h3>
+        <label class="lb" for="tema">Un tema que no puede faltar <span class="opt">(opcional)</span></label>
+        <input type="text" id="tema" maxlength="150" placeholder="Ej: Fito Páez · Mariposa Tecknicolor">
+        <label class="lb" for="mensaje">Un mensaje para Marcelo <span class="opt">(opcional)</span></label>
+        <textarea id="mensaje" maxlength="1000" placeholder="Escribile algo lindo, se lo vamos a mostrar 🎉"></textarea>
+      </div>
+
+      <button class="cta" type="submit" id="send"><span id="sendTxt">CONFIRMAR</span></button>
+      <p class="formerr" id="formerr" role="alert"></p>
+    </form>
+
+    <div class="card closed hide" id="closed">
+      <strong>Se cerró la confirmación</strong>
+      <span style="color:var(--mut)">El plazo era hasta el 28 de noviembre. Si todavía no confirmaste, escribile directamente a la familia.</span>
+    </div>
+  </main>
+
+  <footer>
+    <div class="stripes"></div>
+    Con amor rojinegro · Marcelo 60
+  </footer>
+</div>
+
+<template id="personTpl">
+  <div class="card person">
+    <h3 class="ptitle">Tus datos</h3>
+    <label class="lb">Nombre y apellido</label>
+    <input type="text" class="nombre" maxlength="80" autocomplete="name" placeholder="Nombre y apellido">
+    <label class="lb">¿Asiste?</label>
+    <div class="seg asiste">
+      <button type="button" data-v="Sí" aria-pressed="true">Sí, voy 🎉</button>
+      <button type="button" data-v="No" aria-pressed="false">No puedo 😔</button>
+    </div>
+    <div class="extra">
+      <label class="lb">Restricción alimentaria</label>
+      <select class="restr">
+        <option>Sin restricciones</option>
+        <option>Celíaco</option>
+        <option>Vegetariano</option>
+        <option>Vegano</option>
+        <option>Hipertenso</option>
+        <option>Diabético</option>
+        <option>Otra</option>
+      </select>
+      <input type="text" class="restrOtra hide" maxlength="100" placeholder="¿Cuál?" style="margin-top:8px">
+      <label class="lb">¿Qué tomás? <span class="opt">(podés elegir varias)</span></label>
+      <div class="pills bebidas"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+/* ===================== CONFIGURACIÓN ===================== */
+const CONFIG = {
+  // URL de la Aplicación web de Apps Script (termina en /exec)
+  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycby9YHNKgR8PxOOsSsFQA7Fe-j-hzGLu-FRyJ83Yk4g9VraQpWrYhwcLhlrwOH2UMjy8/exec',
+  FIESTA: '2026-12-29T20:00:00-03:00',
+  FIN: '2026-12-30T02:00:00-03:00',
+  LIMITE: '2026-11-28T23:59:59-03:00',
+  CERRAR_AL_VENCER: true,
+  LUGAR: 'Punta Barranca',
+  DIRECCION: 'David Peña 96, S2005 Rosario, Santa Fe'
+};
+const BEBIDAS = ['Vino','Cerveza','Fernet','Gin','Whisky','Aperitivos','Tragos','Espumante','Sin alcohol'];
+/* ========================================================= */
+
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+
+// Cuenta regresiva
+const fiesta = new Date(CONFIG.FIESTA).getTime();
+function tick(){
+  let d = Math.max(0, fiesta - Date.now());
+  const pad = n => String(n).padStart(2,'0');
+  $('#cd').textContent = Math.floor(d/864e5);
+  $('#ch').textContent = pad(Math.floor(d/36e5)%24);
+  $('#cm').textContent = pad(Math.floor(d/6e4)%60);
+  $('#cs').textContent = pad(Math.floor(d/1e3)%60);
+}
+tick(); setInterval(tick, 1000);
+
+// Link de calendario
+(function(){
+  const f = s => new Date(s).toISOString().replace(/[-:]|\.\d{3}/g,'');
+  const u = new URL('https://calendar.google.com/calendar/render');
+  u.searchParams.set('action','TEMPLATE');
+  u.searchParams.set('text','Cumple 60 de Marcelo 🔴⚫');
+  u.searchParams.set('dates', f(CONFIG.FIESTA)+'/'+f(CONFIG.FIN));
+  u.searchParams.set('details','¡Marcelo cumple 60! De 20 a 02 h. ' + location.href);
+  u.searchParams.set('location', CONFIG.LUGAR + ', ' + CONFIG.DIRECCION);
+  $('#calLink').href = u.toString();
+  $('#mapLink').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(CONFIG.LUGAR + ', ' + CONFIG.DIRECCION);
+})();
+
+// Plazo
+if (CONFIG.CERRAR_AL_VENCER && Date.now() > new Date(CONFIG.LIMITE).getTime()) {
+  $('#form').classList.add('hide'); $('#closed').classList.remove('hide');
+}
+try { if (localStorage.getItem('m60_ok')) $('#already').classList.remove('hide'); } catch(e){}
+
+// Toggles genéricos
+function segGroup(el, onChange){
+  $$('button', el).forEach(b => b.addEventListener('click', () => {
+    $$('button', el).forEach(x => x.setAttribute('aria-pressed', x === b));
+    onChange && onChange(b.dataset.v);
+  }));
+}
+const segVal = el => $('button[aria-pressed=true]', el).dataset.v;
+
+// Personas
+const people = $('#people');
+function makePerson(i){
+  const n = $('#personTpl').content.firstElementChild.cloneNode(true);
+  $('.ptitle', n).textContent = i === 0 ? 'Tus datos' : 'Tu acompañante';
+  $('.nombre', n).placeholder = i === 0 ? 'Tu nombre y apellido' : 'Nombre y apellido de tu acompañante';
+  const pills = $('.bebidas', n);
+  BEBIDAS.forEach(b => {
+    const p = document.createElement('button');
+    p.type = 'button'; p.className = 'pill'; p.textContent = b; p.setAttribute('aria-pressed','false');
+    p.onclick = () => {
+      const on = p.getAttribute('aria-pressed') !== 'true';
+      if (on && b === 'Sin alcohol') $$('.pill', pills).forEach(x => x.setAttribute('aria-pressed','false'));
+      if (on && b !== 'Sin alcohol') $$('.pill', pills).filter(x => x.textContent === 'Sin alcohol').forEach(x => x.setAttribute('aria-pressed','false'));
+      p.setAttribute('aria-pressed', on);
+    };
+    pills.appendChild(p);
+  });
+  segGroup($('.asiste', n), v => $('.extra', n).classList.toggle('hide', v === 'No'));
+  $('.restr', n).onchange = e => $('.restrOtra', n).classList.toggle('hide', e.target.value !== 'Otra');
+  $('.nombre', n).oninput = e => e.target.classList.remove('err');
+  return n;
+}
+people.appendChild(makePerson(0));
+segGroup($('#modo'), v => {
+  const cards = $$('.person', people);
+  if (v === '2' && cards.length === 1) people.appendChild(makePerson(1));
+  if (v === '1' && cards.length === 2) cards[1].remove();
+});
+
+// Envío
+$('#form').addEventListener('submit', async e => {
+  e.preventDefault();
+  $('#formerr').textContent = '';
+  const personas = [];
+  let bad = null;
+  $$('.person', people).forEach(c => {
+    const inp = $('.nombre', c);
+    const nombre = inp.value.trim().replace(/\s+/g,' ');
+    if (nombre.length < 3) { inp.classList.add('err'); bad = bad || inp; }
+    const asiste = segVal($('.asiste', c));
+    let restriccion = $('.restr', c).value;
+    if (restriccion === 'Otra') { const o = $('.restrOtra', c).value.trim(); if (o) restriccion = 'Otra: ' + o; }
+    personas.push({
+      nombre, asiste,
+      restriccion: asiste === 'Sí' ? restriccion : '',
+      bebidas: asiste === 'Sí' ? $$('.pill[aria-pressed=true]', c).map(p => p.textContent) : []
+    });
+  });
+  if (bad) { $('#formerr').textContent = 'Completá nombre y apellido 🙏'; bad.focus(); return; }
+
+  const payload = { personas, tema: $('#tema').value.trim(), mensaje: $('#mensaje').value.trim(), website: $('#website').value };
+  const btn = $('#send');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spin"></div><span>ENVIANDO…</span>';
+
+  try {
+    if (CONFIG.SCRIPT_URL.startsWith('PEGAR')) {
+      console.warn('Modo demo: falta configurar SCRIPT_URL', payload);
+      await new Promise(r => setTimeout(r, 900));
+    } else {
+      const res = await fetch(CONFIG.SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+      const j = await res.json().catch(() => ({ ok: res.ok }));
+      if (!j.ok) throw new Error(j.error || 'Error');
+    }
+    try { localStorage.setItem('m60_ok', '1'); } catch(e){}
+    thanks(personas);
+  } catch (err) {
+    console.error(err);
+    $('#formerr').textContent = 'No se pudo enviar. Revisá tu conexión y probá de nuevo.';
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<span>CONFIRMAR</span>';
+  }
+});
+
+function thanks(personas){
+  const vienen = personas.filter(p => p.asiste === 'Sí');
+  const nombre = personas[0].nombre.split(' ')[0];
+  const m = document.createElement('div');
+  m.className = 'modal';
+  m.innerHTML = vienen.length ? `
+    <div class="box">
+      <div style="font-size:54px">🎉</div>
+      <div class="big">¡Gracias, ${esc(nombre)}!</div>
+      <p>${vienen.length > 1 ? 'Los esperamos' : 'Te esperamos'} el <b style="color:#fff">martes 29 de diciembre a las 20 h en Punta Barranca</b> para festejar los 60 de Marcelo.</p>
+      <a class="cta" href="${$('#calLink').href}" target="_blank" rel="noopener" style="text-decoration:none">AGENDARLO</a>
+      <button class="btn-ghost" style="margin-top:10px" id="closeM">Cerrar</button>
+    </div>` : `
+    <div class="box">
+      <div style="font-size:54px">❤️</div>
+      <div class="big">Gracias por avisar</div>
+      <p>Te vamos a extrañar. Si querés, dejale un mensaje a Marcelo la próxima vez que entres.</p>
+      <button class="cta" id="closeM">CERRAR</button>
+    </div>`;
+  document.body.appendChild(m);
+  $('#closeM', m).onclick = () => { m.remove(); resetForm(); };
+  if (vienen.length) confetti();
+}
+function resetForm(){
+  $('#form').reset();
+  $('#modo button').click();
+  people.innerHTML = ''; people.appendChild(makePerson(0));
+  window.scrollTo({ top: 0 });
+}
+const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// Confetti rojinegro
+function confetti(){
+  const cv = $('#confetti'), ctx = cv.getContext('2d');
+  const W = cv.width = innerWidth, H = cv.height = innerHeight;
+  const cols = ['#e30613','#ff2a3d','#111111','#ffffff'];
+  const ps = Array.from({length: 180}, () => ({
+    x: W/2 + (Math.random()-.5)*80, y: H*.35,
+    vx: (Math.random()-.5)*14, vy: -Math.random()*14-4,
+    s: Math.random()*7+4, r: Math.random()*6, vr: (Math.random()-.5)*.3,
+    c: cols[Math.random()*cols.length|0]
+  }));
+  let t = 0;
+  (function f(){
+    ctx.clearRect(0,0,W,H);
+    ps.forEach(p => {
+      p.vy += .32; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.r += p.vr;
+      ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.r);
+      ctx.fillStyle = p.c; ctx.strokeStyle = '#333';
+      ctx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);
+      ctx.restore();
+    });
+    if (++t < 220) requestAnimationFrame(f); else ctx.clearRect(0,0,W,H);
+  })();
+}
+</script>
+</body>
+</html>
